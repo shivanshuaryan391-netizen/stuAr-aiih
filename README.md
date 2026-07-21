@@ -70,3 +70,4 @@ src/
 ```
 
 Every AI tool calls the shared OpenRouter service with streaming. Every form validates. Every route exists. No placeholders.
+
