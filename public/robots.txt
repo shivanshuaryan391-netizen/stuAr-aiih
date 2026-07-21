@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /app
 
-Sitemap: https://stuar.ai/sitemap.xml
+Sitemap: https://stu-ar-aiih.vercel.app/sitemap.xml
