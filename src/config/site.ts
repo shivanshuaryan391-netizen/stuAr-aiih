@@ -3,7 +3,7 @@ export const SITE = {
   tagline: 'Learn Smarter. Build Your Future.',
   mission:
     'Create the world\u2019s most advanced AI learning platform for school students, college students, competitive exam aspirants, teachers, and self learners.',
-  email: 'hello@stuar.ai',
+  email: shivanshuaryan938@gmail.com',
 }
 
 export const MODELS = [
