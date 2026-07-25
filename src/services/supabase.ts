@@ -1,8 +1,7 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 
-
-const url = "https://vwpfnqqeaeevbtotmtfc.supabase.co"
-const anonKey = "sb_publishable_Ao-UXqwa4aFSdN1miPVNww_gsNyZpKU"
+const url = "https://ynyjcbchzfqqoaqduqpc.supabase.co"
+const anonKey = "sb_publishable_8-BDcIyylcbdRALuilT4Bw_sv8KBPWZ"
 export const isSupabaseConfigured = Boolean(url && anonKey && url.startsWith('http'))
 
 export const supabase: SupabaseClient | null = isSupabaseConfigured
