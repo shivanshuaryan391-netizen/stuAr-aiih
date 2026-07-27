@@ -212,9 +212,8 @@ function NotificationsBell() {
 }
 
 function AvatarMenu() {
-  
   const navigate = useNavigate()
-  
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -222,32 +221,36 @@ function AvatarMenu() {
           type="button"
           aria-label="Account menu"
           className="grid h-10 w-10 place-items-center rounded-xl font-display text-sm font-bold text-white shadow-glow-sm transition-transform hover:scale-105"
-          style={{ background: `linear-gradient(135deg, ${user.avatarColor}, ${user.avatarColor}88)` }}
+          style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}
         >
-          {initials(user.name)}
+          A
         </button>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent align="end" className="glass-strong w-60 rounded-2xl border-white/10 p-2">
         <DropdownMenuLabel className="px-2 py-2">
-          <p className="font-display text-sm font-semibold">{user.name}</p>
-          <p className="truncate text-xs font-normal text-muted-foreground">{user.email}</p>
+          <p className="font-display text-sm font-semibold">Guest User</p>
+          <p className="truncate text-xs font-normal text-muted-foreground">
+            Welcome to StuAr AI
+          </p>
         </DropdownMenuLabel>
+
         <DropdownMenuSeparator className="bg-white/[0.07]" />
-        <DropdownMenuItem className="rounded-xl" onSelect={() => navigate('/app/profile')}>
-          <User className="mr-2 h-4 w-4 text-brand-soft" /> Profile
-        </DropdownMenuItem>
-        <DropdownMenuItem className="rounded-xl" onSelect={() => navigate('/app/settings')}>
-          <Settings className="mr-2 h-4 w-4 text-aqua-soft" /> Settings
-        </DropdownMenuItem>
-        <DropdownMenuSeparator className="bg-white/[0.07]" />
+
         <DropdownMenuItem
-          className="rounded-xl text-red-400 focus:text-red-300"
-          onSelect={async () => {
-            await signOut()
-            navigate('/')
-          }}
+          className="rounded-xl"
+          onSelect={() => navigate('/app/profile')}
         >
-          <LogOut className="mr-2 h-4 w-4" /> Sign out
+          <User className="mr-2 h-4 w-4 text-brand-soft" />
+          Profile
+        </DropdownMenuItem>
+
+        <DropdownMenuItem
+          className="rounded-xl"
+          onSelect={() => navigate('/app/settings')}
+        >
+          <Settings className="mr-2 h-4 w-4 text-aqua-soft" />
+          Settings
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
