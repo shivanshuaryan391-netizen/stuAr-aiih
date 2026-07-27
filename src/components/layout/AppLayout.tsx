@@ -219,37 +219,24 @@ function AvatarMenu() {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          aria-label="Account menu"
-          className="grid h-10 w-10 place-items-center rounded-xl font-display text-sm font-bold text-white shadow-glow-sm transition-transform hover:scale-105"
-          style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}
+          className="grid h-10 w-10 place-items-center rounded-xl bg-indigo-600 text-white font-bold"
         >
-          A
+          G
         </button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="glass-strong w-60 rounded-2xl border-white/10 p-2">
-        <DropdownMenuLabel className="px-2 py-2">
-          <p className="font-display text-sm font-semibold">Guest User</p>
-          <p className="truncate text-xs font-normal text-muted-foreground">
-            Welcome to StuAr AI
-          </p>
-        </DropdownMenuLabel>
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel>Guest User</DropdownMenuLabel>
 
-        <DropdownMenuSeparator className="bg-white/[0.07]" />
+        <DropdownMenuSeparator />
 
-        <DropdownMenuItem
-          className="rounded-xl"
-          onSelect={() => navigate('/app/profile')}
-        >
-          <User className="mr-2 h-4 w-4 text-brand-soft" />
+        <DropdownMenuItem onSelect={() => navigate('/app/profile')}>
+          <User className="mr-2 h-4 w-4" />
           Profile
         </DropdownMenuItem>
 
-        <DropdownMenuItem
-          className="rounded-xl"
-          onSelect={() => navigate('/app/settings')}
-        >
-          <Settings className="mr-2 h-4 w-4 text-aqua-soft" />
+        <DropdownMenuItem onSelect={() => navigate('/app/settings')}>
+          <Settings className="mr-2 h-4 w-4" />
           Settings
         </DropdownMenuItem>
       </DropdownMenuContent>
