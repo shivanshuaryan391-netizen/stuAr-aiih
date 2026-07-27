@@ -27,7 +27,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useAuth } from '@/services/auth'
+
 import { useStore } from '@/services/store'
 import { TOOL_MAP } from '@/services/tools'
 import { initials, timeAgo } from '@/lib/format'
@@ -212,9 +212,9 @@ function NotificationsBell() {
 }
 
 function AvatarMenu() {
-  const { user, signOut } = useAuth()
+  
   const navigate = useNavigate()
-  if (!user) return null
+  
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
