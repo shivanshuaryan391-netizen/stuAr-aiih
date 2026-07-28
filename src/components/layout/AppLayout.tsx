@@ -121,7 +121,7 @@ function SideNav({ onNavigate }: { onNavigate?: () => void }) {
               {pinned.map((t) => (
                 <li key={t!.id}>
                   <NavLink
-                    to={`/app/tools/${t!.id}`}
+                    to={`/tools/${t!.id}`}
                     onClick={onNavigate}
                     className={({ isActive }) =>
                       cn(
@@ -145,7 +145,7 @@ function SideNav({ onNavigate }: { onNavigate?: () => void }) {
       </nav>
       <div className="border-t border-white/[0.07] p-3">
         <NavLink
-          to="/app/settings"
+          to="to="/settings""
           onClick={onNavigate}
           className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
         >
