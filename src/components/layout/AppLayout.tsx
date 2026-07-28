@@ -37,9 +37,9 @@ const NAV_SECTIONS: { title: string; items: { label: string; to: string; icon: s
   {
     title: 'Overview',
     items: [
-      { label: 'Dashboard', to: '/app', icon: 'LayoutDashboard' },
-      { label: 'AI Chat', to: '/app/chat', icon: 'MessageSquare' },
-      { label: 'Tools Library', to: '/app/tools', icon: 'Library' },
+      { label: 'Dashboard', to: '/', icon: 'LayoutDashboard' },
+{ label: 'AI Chat', to: '/chat', icon: 'MessageSquare' },
+{ label: 'Tools Library', to: '/tools', icon: 'Library' },
     ],
   },
   {
