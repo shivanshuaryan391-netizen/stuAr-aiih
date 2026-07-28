@@ -5,7 +5,7 @@ import {
   Bell,
   Check,
   Flame,
-  LogOut,
+  
   Menu,
   Moon,
   Settings,
