@@ -30,7 +30,7 @@ import {
 
 import { useStore } from '@/services/store'
 import { TOOL_MAP } from '@/services/tools'
-import { initials, timeAgo } from '@/lib/format'
+import { timeAgo } from '@/lib/format'
 import { cn } from '@/lib/utils'
 
 const NAV_SECTIONS: { title: string; items: { label: string; to: string; icon: string }[] }[] = [
