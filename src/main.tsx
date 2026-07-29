@@ -1,25 +1,22 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
-import { AuthProvider } from './services/auth'
+import { AuthProvider } from '@/services/auth'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <AuthProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <App />
-      </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </BrowserRouter>
   </StrictMode>,
 )
 
-// Progressive Web App — offline shell + asset caching
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {
-      // SW registration failed — app still works online
-    })
+    navigator.serviceWorker.register('/sw.js').catch(() => {})
   })
 }
