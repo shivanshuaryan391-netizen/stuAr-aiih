@@ -45,7 +45,7 @@ export default function App() {
         <ThemedToaster />
 
         <Routes>
-          <Route path="/" element={<AppLayout />}>
+          <Route path="/app" element={<AppLayout />}>
             <Route
               index
               element={
