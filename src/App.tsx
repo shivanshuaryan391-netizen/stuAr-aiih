@@ -45,64 +45,29 @@ export default function App() {
         <ThemedToaster />
 
         <Routes>
-          <Route path="/app" element={<AppLayout />}>
-            <Route
-              index
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <Dashboard />
-                </Suspense>
-              }
-            />
 
-            <Route
-              path="chat"
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <Chat />
-                </Suspense>
-              }
-            />
+  <Route path="/" element={<Navigate to="/app" replace />} />
 
-            <Route
-              path="tools"
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <Tools />
-                </Suspense>
-              }
-            />
+  <Route path="/app" element={<AppLayout />}>
+    <Route
+      index
+      element={
+        <Suspense fallback={<PageLoader />}>
+          <Dashboard />
+        </Suspense>
+      }
+    />
 
-            <Route
-              path="tools/:toolId"
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <ToolPage />
-                </Suspense>
-              }
-            />
+    <Route path="chat" element={<Suspense fallback={<PageLoader />}><Chat /></Suspense>} />
+    <Route path="tools" element={<Suspense fallback={<PageLoader />}><Tools /></Suspense>} />
+    <Route path="tools/:toolId" element={<Suspense fallback={<PageLoader />}><ToolPage /></Suspense>} />
+    <Route path="profile" element={<Suspense fallback={<PageLoader />}><Profile /></Suspense>} />
+    <Route path="settings" element={<Suspense fallback={<PageLoader />}><Settings /></Suspense>} />
+  </Route>
 
-            <Route
-              path="profile"
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <Profile />
-                </Suspense>
-              }
-            />
+  <Route path="*" element={<Navigate to="/app" replace />} />
 
-            <Route
-              path="settings"
-              element={
-                <Suspense fallback={<PageLoader />}>
-                  <Settings />
-                </Suspense>
-              }
-            />
-          </Route>
-
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+</Routes>
       </StoreProvider>
     </ErrorBoundary>
   )
