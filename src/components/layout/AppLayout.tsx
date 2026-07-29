@@ -145,7 +145,7 @@ function SideNav({ onNavigate }: { onNavigate?: () => void }) {
       </nav>
       <div className="border-t border-white/[0.07] p-3">
         <NavLink
-          to="to="/settings""
+          to="/app/settings"
           onClick={onNavigate}
           className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/[0.05] hover:text-foreground"
         >
