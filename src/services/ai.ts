@@ -106,11 +106,8 @@ export async function complete(opts: Omit<StreamOptions, 'onToken'>): Promise<st
     method: 'POST',
     signal,
     headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
-      'HTTP-Referer': window.location.origin,
-      'X-Title': 'StuAr AI',
-    },
+  'Content-Type': 'application/json',
+},
     body: JSON.stringify({
       model,
       messages,
