@@ -13,7 +13,7 @@ export interface StreamOptions {
   maxTokens?: number
 }
 
-const ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions'
+const ENDPOINT = '/api/chat'
 
 export class AIError extends Error {
   status?: number
