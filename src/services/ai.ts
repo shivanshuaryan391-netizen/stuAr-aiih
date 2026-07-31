@@ -98,7 +98,7 @@ export async function streamChat(opts: StreamOptions): Promise<string> {
 
 /** Non-streaming helper used by structured generators (flashcards, quiz). */
 export async function complete(opts: Omit<StreamOptions, 'onToken'>): Promise<string> {
-  const { model, messages, signal, onToken } = opts
+  const { model, messages, signal } = opts
   const res = await fetch(ENDPOINT, {
     method: 'POST',
     signal,
