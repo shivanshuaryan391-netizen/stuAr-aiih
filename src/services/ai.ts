@@ -25,7 +25,7 @@ export class AIError extends Error {
 
 /** Stream a chat completion from OpenRouter via SSE. Returns the full text. */
 export async function streamChat(opts: StreamOptions): Promise<string> {
-  const { model, messages, signal } = opts
+  const { model, messages, signal, onToken } = opts
   let res: Response
   try {
     res = await fetch(ENDPOINT, {
