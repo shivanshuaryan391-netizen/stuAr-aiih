@@ -257,7 +257,7 @@ export default function Chat() {
       let full = ''
       try {
         full = await streamChat({
-          apiKey: settings.openrouterKey,
+          apiKey: '',
           model: settings.model,
           messages: apiMessages,
           signal: controller.signal,
