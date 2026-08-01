@@ -40,7 +40,7 @@ export default function QuizPage() {
     setPhase('generating')
     try {
       const raw = await complete({
-        apiKey: settings.openrouterKey,
+        apiKey: '',
         model: settings.model,
         messages: [
           {
