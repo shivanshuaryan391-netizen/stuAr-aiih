@@ -191,7 +191,7 @@ export default function Chat() {
     [conversations, currentId],
   )
   const isStreaming = streamingId !== null
-  const hasKey = Boolean(settings.openrouterKey)
+  const hasKey = true
   const modelLabel = MODELS.find((m) => m.id === settings.model)?.label ?? settings.model
 
   useEffect(() => {
