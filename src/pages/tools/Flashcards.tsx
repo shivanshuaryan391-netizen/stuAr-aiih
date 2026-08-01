@@ -40,7 +40,7 @@ export default function FlashcardsPage() {
     setPhase('generating')
     try {
       const raw = await complete({
-        apiKey: settings.openrouterKey,
+        apiKey: '',
         model: settings.model,
         messages: [
           {
