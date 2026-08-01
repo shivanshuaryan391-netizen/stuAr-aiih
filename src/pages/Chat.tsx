@@ -290,10 +290,7 @@ export default function Chat() {
   const send = useCallback(() => {
     const text = input.trim()
     if ((!text && !image) || isStreaming) return
-    if (!hasKey) {
-      toast.error('Connect OpenRouter first', { description: 'Add your API key below or in Settings.' })
-      return
-    }
+    
     const convId = currentId ?? uid()
     const userMsg: ChatMessage = { id: uid(), role: 'user', content: text, ts: Date.now(), image: image ?? undefined }
     const history = [...(current?.messages ?? []), userMsg]
