@@ -299,7 +299,7 @@ export default function Chat() {
     setInput('')
     setImage(null)
     void runAssistant(convId, history)
-  }, [input, image, isStreaming, hasKey, currentId, current, persistMessages, runAssistant])
+  }, [input, image, isStreaming, currentId, current, persistMessages, runAssistant])
 
   const regenerate = useCallback(() => {
     if (!current || isStreaming) return
