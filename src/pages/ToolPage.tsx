@@ -1,3 +1,4 @@
+
 import { useCallback, useEffect, useRef, useState, type ComponentType } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, Check, Copy, ImagePlus, RefreshCw, Sparkles, Square, StickyNote, Trash2, X } from 'lucide-react'
@@ -133,7 +134,7 @@ function AiRunner({ toolId }: { toolId: string }) {
 
     try {
       await streamChat({
-        apiKey: settings.openrouterKey,
+        apiKey: '',
         model: settings.model,
         messages,
         signal: controller.signal,
